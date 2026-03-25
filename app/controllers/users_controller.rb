@@ -78,3 +78,12 @@ class UsersController < ApplicationController
       @show_title = 'ユーザー詳細'
     end
 end
+
+def new
+  @user = User.new
+  @user.name = 'らんてくん'
+end
+
+def index
+  @users = User.where(age: 20..50)
+end
