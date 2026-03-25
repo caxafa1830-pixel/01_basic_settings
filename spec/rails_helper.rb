@@ -65,7 +65,7 @@ RSpec.configure do |config|
 
   if ENV['CODEBUILD_BUILD_ID']
     config.before(:each, type: :system) do
-      driven_by :ci_headless_chrome
+      driven_by :selenium, using: :headless_chrome, screen_size: [1920, 1080]
     end
   else
     config.before(:each, type: :system) do
