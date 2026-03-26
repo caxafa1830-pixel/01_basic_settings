@@ -20,7 +20,10 @@
     <%= form.label :age, '年齢', style: "display: block" %>
     <%= form.number_field :age %>
   </div>
-
+  <div>
+    <%= form.label :tel, '電話番号', style: "display: block" %>
+    <%= form.text_field :tel %>
+  </div>
   <div>
     <%= form.submit '登録' %>
   </div>
