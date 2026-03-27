@@ -46,8 +46,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-    def user_params
-      params.require(:user).permit(:name, :age, :tel, :address)  
+  # ← ここを修正
+  def user_params
+    params.require(:user).permit(:name, :age, :tel, :address, :password, :password_confirmation)
   end
 
   def set_index_title
