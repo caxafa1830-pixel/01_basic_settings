@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_27_052111) do
     t.datetime "updated_at", null: false
     t.string "tel"
     t.string "address"
+    t.string "password_digest"
   end
 
 end
