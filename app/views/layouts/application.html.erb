@@ -16,6 +16,15 @@
       <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <div class="col-md-3 text-end">
+        <% if current_user.present? %>
+          <span class="text-white me-2">ようこそ、<%= current_user.name %>さん</span>
+          <%= link_to 'ログアウト', logout_path, method: :delete, class: 'btn btn-outline-danger' %>
+        <% else %>
+          <%= link_to 'ログイン', new_login_path, class: 'btn btn-outline-primary me-2' %>
+        <% end %>
+      </div>
     </header>
 
     <div class="container-fluid">

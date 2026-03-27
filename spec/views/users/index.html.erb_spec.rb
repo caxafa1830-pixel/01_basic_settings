@@ -5,11 +5,13 @@ RSpec.describe "users/index", type: :view do
     assign(:users, [
       User.create!(
         name: "Name",
-        age: 2
+        age: 2,
+        password: "password"
       ),
       User.create!(
         name: "Name",
-        age: 2
+        age: 2,
+        password: "password"
       )
     ])
   end

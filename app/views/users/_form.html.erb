@@ -20,7 +20,8 @@
     <%= form.label :age, '年齢', style: "display: block" %>
     <%= form.number_field :age %>
   </div>
-   <div>
+
+  <div>
     <%= form.label :tel, '電話番号', style: "display: block" %>
     <%= form.text_field :tel %>
   </div>
@@ -30,6 +31,17 @@
     <%= form.text_field :address %>
   </div>
 
+  <!-- ここからパスワード欄を追加 -->
+  <div>
+    <%= form.label :password, 'パスワード', style: "display: block" %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div>
+    <%= form.label :password_confirmation, 'パスワード確認', style: "display: block" %>
+    <%= form.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+  <!-- ここまで -->
 
   <div>
     <%= form.submit '登録' %>
