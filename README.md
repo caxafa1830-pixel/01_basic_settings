@@ -9,7 +9,8 @@ docker compose build
 ### railsサーバーの起動(バックグラウンドでのコンテナの立ち上げとrailsサーバーの起動)
 
 ```
-docker compose up -d
+docker compose up
+*docker compose upを実行しているターミナルとは別に新しくターミナルを立ち上げてください。新しいターミナルにて以下のコマンドを実行してください。
 ```
 
 ### コンテナ内に入る(rails・bundler・yarn関係のコマンドはコンテナ内で実行します)
