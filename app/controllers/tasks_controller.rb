@@ -33,9 +33,9 @@ class TasksController < ApplicationController
   # タスク更新
   def update
     if @task.update(task_params)
-      redirect_to @task, notice: "タスクを更新しました"
+      redirect_to @task, notice: "タスクの更新に成功しました"
     else
-      flash.now[:alert] = "更新に失敗しました"
+      flash.now[:alert] = "タスクの更新に失敗しました"
       render :edit, status: :unprocessable_entity
     end
   end
@@ -43,7 +43,7 @@ class TasksController < ApplicationController
   # タスク削除
   def destroy
     @task.destroy
-    redirect_to tasks_path, notice: "タスクを削除しました"
+    redirect_to tasks_path, notice: "タスクの削除に成功しました"
   end
 
   private
