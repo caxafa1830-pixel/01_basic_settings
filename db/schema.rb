@@ -12,6 +12,8 @@
 
 ActiveRecord::Schema[7.0].define(version: 2026_03_28_012431) do
   create_table "tasks", charset: "utf8mb4", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
