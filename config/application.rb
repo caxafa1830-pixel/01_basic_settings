@@ -33,5 +33,12 @@ module V3BasicRailsBasic
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # 追加設定（自動生成を減らす）
+    config.generators do |g|
+      g.skip_routes true
+      g.helper false
+      g.test_framework nil
+    end
   end
 end
